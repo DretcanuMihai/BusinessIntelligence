@@ -1,0 +1,474 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="d2e97bba-cc97-4d2f-bca5-a05d9b9a6a1c" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Bus Rides Warehouse</ID>
+  <Name>Bus Rides Warehouse</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="77aab089-6060-45fe-9240-4f6cda3fbb8f">
+      <ID>Start Station</ID>
+      <Name>Start Station</Name>
+      <DimensionID>Dim Station</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="9f28eb12-f4cf-4260-9517-18ad535e30f6">
+          <AttributeID>Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="14adf938-0157-4dae-899c-0d232bc80856">
+          <AttributeID>Entity Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a56a7098-0da3-442e-86d5-927523da5144">
+          <AttributeID>Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0fe45fc3-0bb3-40a4-9d59-108fb300bdf2">
+          <AttributeID>Ticket Availability</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="252ea95a-0349-44be-ae23-4ef05b176a6e">
+          <AttributeID>Street Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="71617775-c8d7-4084-bb24-c6eef38a0024">
+          <AttributeID>Street Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5e732b67-dcb3-4011-8d9f-9196ddb8e7a1">
+          <AttributeID>Street Number</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="30a0158e-4d6a-4d7a-ac65-058230f6bdf8">
+          <AttributeID>Number Of Routes</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="106a09e7-1a7e-49d1-a1e3-d8b2ff19eced">
+          <AttributeID>Start Date</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7b0904f4-c7a2-4eef-b072-f0e1334ddf36">
+          <AttributeID>End Date</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="643ae4ed-ae7c-43a2-bf04-16befe613ba8">
+      <ID>End Station</ID>
+      <Name>End Station</Name>
+      <DimensionID>Dim Station</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="969acb7a-221e-4120-ae2b-9c048c8f236c">
+          <AttributeID>Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="319d8858-b7e2-4bfb-8cc8-3f44015526a5">
+          <AttributeID>Entity Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2e967f32-48ff-4f8e-8d4e-851cf4fa35df">
+          <AttributeID>Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="fd5818a3-f01f-4453-aa73-37ebef8674fb">
+          <AttributeID>Ticket Availability</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="43ef2276-2f9e-45ef-9710-b54c6e971ad5">
+          <AttributeID>Street Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c902e9ad-ab54-413a-9514-ab0d89eefe51">
+          <AttributeID>Street Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="00f50fb7-4594-4f14-a7a7-143f06458439">
+          <AttributeID>Street Number</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a043abff-c0ee-4a82-9216-4c3d6ecd8b1a">
+          <AttributeID>Number Of Routes</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c2ecada7-2e57-4f5d-bbbe-4b7a21cf5248">
+          <AttributeID>Start Date</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="64d27d70-909f-4e08-9e5b-57b7d1ddca8d">
+          <AttributeID>End Date</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="228841fc-3c24-4ff5-9226-53a039e3c682">
+      <ID>Dim Date</ID>
+      <Name>Dim Date</Name>
+      <DimensionID>Dim Date</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="dc734225-1598-413a-a6fd-82db5f7a0a39">
+          <AttributeID>Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="67e960e2-dd22-4977-bedf-b863a14b48cd">
+          <AttributeID>Date</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f51928c9-ec81-47a4-85f2-e937880aed02">
+          <AttributeID>Full Date</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a2488d66-ba83-4675-8cd7-92484f8d44a9">
+          <AttributeID>Day Of Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ee2d89e3-f0a5-4c09-a0ff-a55d23d7b286">
+          <AttributeID>Day Suffix</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c171f731-47d0-4652-a6d4-67182d8afa69">
+          <AttributeID>Day Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0de82cb3-c2d6-4347-9434-77cc6b6f9a8b">
+          <AttributeID>Day Of Week</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="42dc22f1-fdcb-4dc3-8491-2dd12e8748aa">
+          <AttributeID>Day Of Week In Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0ab60bf3-28ae-4510-81df-477223aa802a">
+          <AttributeID>Day Of Week In Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ebefd9b3-84d6-4b16-99fb-fbbcb930aa7b">
+          <AttributeID>Day Of Quarter</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8bac4ee2-0ff0-48c9-a19b-8f6ccbac327e">
+          <AttributeID>Day Of Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="904d7357-8a70-4224-a36f-65793714939c">
+          <AttributeID>Week Of Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2aa570b6-e875-4c4a-a38a-7e0983a38e9e">
+          <AttributeID>Week Of Quarter</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="da6d42ce-d91d-485b-ba99-124c4dc0829f">
+          <AttributeID>Week Of Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="aa1e1630-a4e5-43d4-a1a4-a5742162638c">
+          <AttributeID>Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="136714ba-d4cc-4195-afcc-4f35d518d49e">
+          <AttributeID>Month Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b79c937b-aa54-469a-bec7-ad4c79270003">
+          <AttributeID>Month Of Quarter</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c8f5be93-7e45-4503-9bbc-bc68da67f0c4">
+          <AttributeID>Quarter</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="03639a00-9b4a-4c33-89d7-735bf5c7f668">
+          <AttributeID>Quarter Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6d8ae39d-68b2-4598-bdc6-cbe6d34e1e50">
+          <AttributeID>Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a2af8bf1-3b6a-49d8-90f2-5dea75571d54">
+          <AttributeID>Year Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3d606caf-1826-4d14-855b-23a3a69d63d4">
+          <AttributeID>Month Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="55e8508d-4d27-4f5b-a11f-3505e78396ad">
+          <AttributeID>MMYYYY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d180a827-9a03-49e5-ac69-6b4b08f7547b">
+          <AttributeID>First Day Of Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0f7804be-89ba-40d1-8496-7a96f845f458">
+          <AttributeID>Last Day Of Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b44f2ff0-1eca-4a8b-8abe-d704f82fbe5f">
+          <AttributeID>First Day Of Quarter</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1f6e0015-2083-44ec-9c60-6f0d6998fca3">
+          <AttributeID>Last Day Of Quarter</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="fce4c2dd-01d8-4ea4-8144-6e0d4229e6eb">
+          <AttributeID>First Day Of Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="be2bc828-7f04-4a22-877a-b77849add71c">
+          <AttributeID>Last Day Of Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="68466f27-27b1-4ca9-b614-6cf7fadfd436">
+          <AttributeID>Is Weekday</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="bc5f1302-c5a1-4ff6-b59e-d85e50cd2466">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="a270b34e-817e-45a9-aea0-5ce6dbe44aff">
+      <ID>Dim Payment Method</ID>
+      <Name>Dim Payment Method</Name>
+      <DimensionID>Dim Payment Method</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="d86882cb-a735-48ce-84f9-876b71649c23">
+          <AttributeID>Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="10646e2b-77d6-441b-8a63-2fec2f2838cc">
+          <AttributeID>Description</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c1648ff0-0441-4683-b11e-46862adb6de9">
+          <AttributeID>Payment Time</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="35212b08-7d70-4380-b2b6-235f46adc467">
+      <ID>Dim Bus</ID>
+      <Name>Dim Bus</Name>
+      <DimensionID>Dim Bus</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="cd3c83a2-0746-4359-abfb-68517e3d4b6b">
+          <AttributeID>Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ebcd28eb-8145-45c6-ae90-25636e97b06c">
+          <AttributeID>Manufacturing Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="71b5a3c6-f10c-4eb5-8566-6ef11a6fd1db">
+          <AttributeID>Route Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="515f0baa-8941-481b-85c1-3b7de514a39d">
+          <AttributeID>Route Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="044a6a7e-d0fc-4fea-b097-088cf6d8e2e6">
+          <AttributeID>Number Of Stations</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ee63684d-ebf9-4c6f-83a3-db25bb3429db">
+          <AttributeID>Driver Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8638edbb-e656-467d-a9b1-b0eb0945231d">
+          <AttributeID>Driver Full Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d1dac572-a2d3-41d7-bb7f-819bad49b385">
+          <AttributeID>Driver Gender</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5db1d3dd-b996-4cfb-b25c-7f526e72f95c">
+          <AttributeID>Driver Date Of Birth</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="2d4ab085-58da-40a7-b771-e047ea95c944">
+      <ID>Dim Person</ID>
+      <Name>Dim Person</Name>
+      <DimensionID>Dim Person</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="6d37b762-1ade-492a-939e-b844b1be0e79">
+          <AttributeID>Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f38f10a4-b184-43c8-bbf9-aa12995d39d3">
+          <AttributeID>Full Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="234f947d-417a-497d-ab78-0eaa4b6e691d">
+          <AttributeID>Gender</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="cef4f130-f276-4ae1-a2de-cc48c721c15e">
+          <AttributeID>Date Of Birth</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="870d4b41-0dbe-4e7a-93fc-eb14b82ac2f0">
+          <AttributeID>Residence Street Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="dc24d332-6e26-4550-a886-712e77fe5f2b">
+          <AttributeID>Residence Street Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="439ea431-a9f5-41e7-9f42-d517e0a4e8e3">
+          <AttributeID>Residence Street Number</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="8453731d-80b0-4748-a240-32b5815dbe38">
+      <ID>Fact Rides</ID>
+      <Name>Fact Rides</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="9968a66c-defc-4a37-bd94-304ef7fbc164">
+          <ID>Duration</ID>
+          <Name>Duration</Name>
+          <Source dwd:design-time-name="7fff6773-11fe-4372-bb31-35eadbf847fc">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="6a174480-2ca5-4bc1-a68c-dd39b22ecaf8">
+              <TableID>dbo_FactRides</TableID>
+              <ColumnID>Duration</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="4ff9ebcd-0d9e-4c52-bce8-1dbe61f2f5f4">
+          <ID>Number Of Stations</ID>
+          <Name>Number Of Stations</Name>
+          <Source dwd:design-time-name="c96cca90-06cb-4ad7-ad50-8a82259c42c6">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="2a2fba67-7e6a-4247-badb-25f0500c27a1">
+              <TableID>dbo_FactRides</TableID>
+              <ColumnID>NumberOfStations</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="95915385-71eb-439c-a7d7-02fedfe4279d">
+          <ID>Payment Value</ID>
+          <Name>Payment Value</Name>
+          <Source dwd:design-time-name="b6a13f3b-bd51-4863-b7e8-4d8063180d1c">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="3d660d28-6f03-4b6e-8788-1f97ac6877ec">
+              <TableID>dbo_FactRides</TableID>
+              <ColumnID>PaymentValue</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="fa62117b-c962-4227-9fdc-3d9d44de7fc1">
+          <ID>Fact Rides Count</ID>
+          <Name>Fact Rides Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="cb10b07f-852f-4345-837f-c12876da1197">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="93ee3ea5-2805-499a-a280-4db4cb12197e">
+              <TableID>dbo_FactRides</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="eb6dbd06-cf4b-4fc3-bf53-1a1f75c4e077">
+          <CubeDimensionID>Dim Date</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="85d4ad5e-9fdb-4e51-958f-a297522cfcad">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="599bd3cc-27b0-425f-a1c5-aed4efdbecfc">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="75758b5e-ab3b-4cd3-905f-a718ad41737a">
+                    <TableID>dbo_FactRides</TableID>
+                    <ColumnID>DateId</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="95761621-7176-4495-9d7b-cba31b356b82">
+          <CubeDimensionID>Start Station</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="a8990cd9-3626-4b27-b167-4f088f862790">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="9f234f2b-13ac-4db0-ac85-905a65b33b6b">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="08fbe6ff-dae4-4424-bd32-c285d6319db3">
+                    <TableID>dbo_FactRides</TableID>
+                    <ColumnID>StartStationId</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="232ffce7-e515-4614-9fa9-02444ed2eee1">
+          <CubeDimensionID>Dim Payment Method</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="619d2d14-7ba5-473b-9feb-1c53ab8e4e82">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="85d0e542-b68f-4a1a-8654-802dc8185d4c">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="e96fe669-7dc6-4712-8561-3651f519ea96">
+                    <TableID>dbo_FactRides</TableID>
+                    <ColumnID>PaymentMethodId</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="4603433c-074d-4327-a9d1-df6ae7fdafc0">
+          <CubeDimensionID>Dim Bus</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="17a371e2-9172-411e-a7a2-3b6a8426af83">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="fb0dc3ed-7fe3-43b1-8653-341b542ef5c9">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="b7c20945-68b2-4d15-93ff-33df77a99102">
+                    <TableID>dbo_FactRides</TableID>
+                    <ColumnID>BusId</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="1c78501d-a2a4-449d-bfef-5efbbf97c3cc">
+          <CubeDimensionID>End Station</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="79d74906-009d-4379-92da-31451216bd1f">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="8cfe5f08-5c28-4e4a-8200-4f56f82aba0e">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="2be68272-f4b7-4210-bb3f-bfca135a4184">
+                    <TableID>dbo_FactRides</TableID>
+                    <ColumnID>EndStationId</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="68714a2f-6fe2-4672-a436-3f21e2b177b5">
+          <CubeDimensionID>Dim Person</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="0016f1fb-f21a-4bb7-9537-85e26506df1b">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="8e1a6a21-a4fb-49d2-aea3-557b553dca21">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="fb4f922f-12ad-48cc-a6bf-ecd83fd431ad">
+                    <TableID>dbo_FactRides</TableID>
+                    <ColumnID>PersonId</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="2c9f6955-9d18-4e9e-9c38-267ce6b03331">
+    <DataSourceViewID>Bus Rides Warehouse</DataSourceViewID>
+  </Source>
+</Cube>
